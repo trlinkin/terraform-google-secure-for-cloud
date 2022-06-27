@@ -26,6 +26,7 @@ module "secure_secrets" {
 
   cloud_scanning_sa_email = google_service_account.connector_sa.email
   sysdig_secure_api_token = data.sysdig_secure_connection.current.secure_api_token
+  replica_location        = data.google_client_config.current.region
 }
 
 module "cloud_connector" {

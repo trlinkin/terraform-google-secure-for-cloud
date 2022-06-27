@@ -18,3 +18,9 @@ variable "name" {
   description = "Name to be assigned to all child resources. A suffix may be added internally when required. Use default value unless you need to install multiple instances"
   default     = "sfc"
 }
+
+variable "replica_location" {
+  type        = string
+  description = "Location to store the Sysdig Cloud Connector Secret, Defaults to Global"
+  default     = "global"
+}
